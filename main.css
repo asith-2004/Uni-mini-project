@@ -1,0 +1,287 @@
+/* Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url(bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Added for consistent layout if needed */
+}
+
+/* Content Wrappers */
+.contents,
+.content-wrap { 
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.body-cont,
+.body-center {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    justify-content: center; 
+}
+
+
+.prgh {
+            display: block;
+            margin-top: 50px;
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 800px;
+            padding: 80px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(147, 51, 234, 0.3);
+            transition: all 0.3s ease;
+            text-align: center;
+            max-width: 90%;
+            color: #e0f2f7;
+        }
+
+        .prgh:hover {
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.6);
+            transform: translateY(-8px);
+            background-color: rgba(0, 0, 0, 0.534);
+        }
+
+
+/* Main Heading Styles */
+h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #ffffff; /* Adjusted to be more general as both had it */
+}
+
+/* Paragraph Text Styles */
+p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #b3e0ff;
+}
+
+/* Image Styles */
+img {
+    border-radius: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+}
+
+/* Body Buttons Container */
+.body-btns {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Body Button Styles */
+.bd-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #9333ea;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.bd-btn:hover {
+    background-color: #7e22ce;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.bd-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* App Container for Comments (if applicable) */
+#app {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid purple;
+}
+
+#app h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+/* Comment Form */
+#cmt-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#cmt-form input,
+#cmt-form textarea {
+    padding: 12px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid #a78bfa;
+    width: 100%;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#cmt-form input::placeholder,
+#cmt-form textarea::placeholder {
+    color: #666;
+}
+
+#cmt-form input:focus,
+#cmt-form textarea:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 2px #8b5cf6;
+}
+
+#cmt-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#cmt-form button {
+    padding: 12px 24px;
+    background-color: #8b5cf6;
+    color: white;
+    font-weight: 600;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#cmt-form button:hover {
+    background-color: #7c3aed;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+#cmt-form button:active {
+    transform: scale(0.98);
+}
+
+/* Comments Display */
+#comments {
+    margin-top: 30px;
+}
+
+#comments>div {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 15px;
+}
+
+#comments>div:last-child {
+    margin-bottom: 0;
+}
+
+#comments>div p:first-child {
+    font-weight: bold;
+    font-size: 1.125rem;
+    color: #d8b4fe;
+    margin-bottom: 5px;
+}
+
+#comments>div p:last-child {
+    color: #eee;
+    line-height: 1.6;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .prgh,
+    .prgh2 {
+        padding: 40px; /* Reduced from 80px/100px */
+        margin-top: 30px; /* Reduced from 50px */
+        width: 95%; /* Increased from 90% */
+    }
+
+    h3 {
+        font-size: 24px; /* Reduced from 30px */
+    }
+
+    p {
+        font-size: 16px; /* Reduced from 20px */
+    }
+
+    img {
+        max-width: 300px; /* Reduced from 350px */
+    }
+
+    .body-btns {
+        flex-direction: column;
+        gap: 15px; /* Reduced from 20px */
+    }
+
+    .bd-btn {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .prgh,
+    .prgh2 {
+        padding: 25px; /* Further reduced from 40px */
+        margin-top: 20px; /* Further reduced from 30px */
+    }
+
+    h3 {
+        font-size: 20px; /* Further reduced from 24px */
+    }
+
+    p {
+        font-size: 14px; /* Further reduced from 16px */
+    }
+
+    img {
+        max-width: 250px; /* Further reduced from 300px */
+    }
+
+    .bd-btn {
+        padding: 12px 20px; /* Reduced from 15px 30px */
+        font-size: 16px; /* Reduced from 18px */
+    }
+}

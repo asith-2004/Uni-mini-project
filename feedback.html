@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+
+</head>
+
+<body>
+    <div class="content-wrap">
+        <div class="header">
+            <div class="title-name">SMART CITY</div>
+            <div class="nav-btns">
+                <ul class="nav-btn">
+                    <div class="list-data">
+                        <li><a href="index.html" class="anc">Home</a></li>
+                    </div>
+                    <div class="list-data">
+                        <li><a href="local.html" class="anc">Local Issues</a></li>
+                    </div>
+                    <div class="list-data">
+                        <li><a href="solution.html" class="anc">Solution</a></li>
+                    </div>
+                    <div class="list-data">
+                        <li><a href="event.html" class="anc">Community Events</a></li>
+                    </div>
+                    <div class="list-data">
+                        <li><a href="feedback.html" class="anc">FeedBack</a></li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+        <div class="body-center">
+            <div id="app">
+                <h1>Feedback Forum</h1>
+
+                <form id="cmt-form" @submit.prevent="addCmnt">
+                    <input id="user-in" type="text" placeholder="Your Name" v-model="userName" >
+                    <textarea id="newMessage" placeholder="Share your comment..." v-model="message"></textarea>
+                    <button type="submit" id="submit">Submit Feedback</button>
+                </form>
+
+                <div id="comments">
+                    <div v-if="commentss.length === 0">No comments.</div>
+                    <div v-for="comment in commentss">
+                        <p>{{ comment.username }}</p>
+                        <p>{{ comment.message }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="vue.js"></script>
+    </div>
+
+    <script>
+
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
